@@ -78,14 +78,48 @@ format:
 - [title](paper link) [links]
   - author1, author2, and author3...
   - publisher
-  - keyword
+  - abstract
   - code
   - experiment environments and datasets
 ```
 
 ### 2024
 
+- [Enhancing LLM Safety via Constrained Direct Preference Optimization](https://arxiv.org/abs/2403.02475)
+  - Zixuan Liu, Xiaolin Sun, Zizhan Zheng
+  - 受限的DPO算法，在不使用强化学习的情况下确定帮助和无害性之间的最佳权衡。
+
 ### 2023
+
+- [Leftover-Lunch: Advantage-based Offline Reinforcement Learning for Language Models](https://ar5iv.labs.arxiv.org/html/2305.14718)
+  - Ashutosh Baheti, Ximing Lu, Faeze Brahman, Ronan Le Bras, Maarten Sap, Mark Riedl
+  - ICLR 2024
+  - A-LoL假设整个LM输出序列作为一个单一的动作，允许将序列级分类器或人为设计的评分函数作为奖励纳入其中。它利用LM内部的序列级价值估计来在训练期间过滤掉负面优势（低质量）的数据点，提高了对噪声的鲁棒性并提高了学习效率。在有用性和安全性上较DPO都有提高。
+  - [code](https://github.com/abaheti95/LoL-RL)
+    
+- [Privately Aligning Language Models with Reinforcement Learning](https://arxiv.org/abs/2310.16960)
+  - Fan Wu, Huseyin A. Inan, Arturs Backurs, Varun Chandrasekaran, Janardhan Kulkarni, Robert Sim
+  - ICLR 2024
+  - 作者提出了一个新的差分隐私（DP）框架，用于在RL过程中对齐LLMs，在保护用户隐私的同时，做到对齐。
+
+- [Fine-Grained Human Feedback Gives Better Rewards for Language Model Training](https://arxiv.org/abs/2306.01693)
+  - Zeqiu Wu, Yushi Hu, Weijia Shi, Nouha Dziri, Alane Suhr, Prithviraj Ammanabrolu, Noah A. Smith, Mari Ostendorf, Hannaneh Hajishirzi
+  - NuerIPS 2023
+  - 使用细粒度的人类反馈作为训练信号，训练多个奖励模型，对大模型的输出进行不同类型的对齐，通过调整奖励模型的权重，可以实现定制化模型输出。
+  - [code](https://github.com/allenai/FineGrainedRLHF)
+
+- [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](https://arxiv.org/abs/2305.18290)
+  - Rafael Rafailov, Archit Sharma, Eric Mitchell, Stefano Ermon, Christopher D. Manning, Chelsea Finn
+  - NeurIPS 2023
+  - DPO，不需要拟合奖励模型，不需要在微调时从 LM 中采样，也不需要大量的超参调节。
+  - [code](https://github.com/eric-mitchell/direct-preference-optimization)
+
+- [RRHF: Rank Responses to Align Language Models with Human Feedback without tears](https://arxiv.org/abs/2304.05302)
+  - Zheng Yuan, Hongyi Yuan, Chuanqi Tan, Wei Wang, Songfang Huang, Fei Huang
+  - NeurIPS 2023
+  - 通过排名损失使评分与人类的偏好（或者代理的奖励模型）对齐, 训练好的模型同时作为生成语言模型和奖励模型使用。相比PPO在编码、模型数量和超参数方面更简单。
+  - [code](https://github.com/GanjinZero/RRHF)
+
 
 ### 2022
 
