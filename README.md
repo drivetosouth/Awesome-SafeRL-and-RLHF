@@ -122,6 +122,16 @@ format:
 
 
 ### 2022
+- [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073)
+- Bai, Yuntao, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen et al
+- CAI包括两个阶段，监督学习（SL）和强化学习（RL）。SL数据集由helpful RLHF模型采用提示-回复-批判-修正的步骤生成，RL数据集中有用性标签由人工标注，有害性标签使用反馈模型对SL-CAI的回复进行选择。论文还尝试了使用思维链辅助反馈模型选择。
+- [code](https://github.com/anthropics/ConstitutionalHarmlessnessPaper)
+
+- [Training language models to follow instructions with human feedback](Training language models to follow instructions with human feedback)
+- Ouyang, Long, Jeffrey Wu, Xu Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, Chong Zhang et al.
+- NeurIPS 2022
+- InstuctGPT
+- [code](https://github.com/openai/following-instructions-human-feedback)
 
 ### 2021
 
