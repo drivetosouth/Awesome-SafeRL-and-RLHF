@@ -120,6 +120,10 @@ format:
   - 通过排名损失使评分与人类的偏好（或者代理的奖励模型）对齐, 训练好的模型同时作为生成语言模型和奖励模型使用。相比PPO在编码、模型数量和超参数方面更简单。
   - [code](https://github.com/GanjinZero/RRHF)
 
+- [Llama 2: Open Foundation and Fine-Tuned Chat Models](https://arxiv.org/abs/2307.09288)
+  - Touvron, Hugo, Louis Martin, Kevin Stone, Peter Albert, Amjad Almahairi, Yasmine Babaei, Nikolay Bashlykov et al.
+  - Llama 2。使用两个RM平衡有用性和无害性。在做PPO时，Reward结合了两个RM的结果，当Prompt为可能引发潜在不安全响应时，使用Safety RM对prompt+response进行打分，如果分数低于阈值（0.15），则认为response不安全，使用Safty RM的Reward，否则，使用Helpful RM。
+  - [code](https://github.com/meta-llama/llama)
 
 ### 2022
 - [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073)
@@ -146,9 +150,16 @@ format:
   - experiment environments or tasks
 ```
 
+- [hh-rlhf](https://github.com/anthropics/hh-rlhf)
+  - 包含大约 169K 个实例，可以分为两部分，分别关注 LLM 的有用性和无害性。每个实例都是众包工作者和聊天模型之间的开放式对话，内容涉及寻求帮助、建议或完成任务。聊天模型为每个用户查询提供两个响应，并且将选择更有帮助或有害的响应作为注释。
 
+- [SHP](https://huggingface.co/datasets/stanfordnlp/SHP)
+  - 包含385k人类偏好评测的数据集，一共过包括18个不同的子领域。每个示例都是一个 Reddit 帖子，其中包含一个问题/说明以及该帖子的一对评论，其中一条评论更受到 Reddit 用户（集体）的青睐。该偏好意在反映哪个回复更有帮助,而不是哪个更无害。
+ 
+- [PKU-SafeRLHF](https://huggingface.co/datasets/PKU-Alignment/PKU-SafeRLHF)
+  - 包含超过330k个数据实例，重点关注有用性和无害性。数据集中的每个实例都包含一个问题和两个响应，并附有每个响应的安全标签以及两个响应之间根据有用性和无害性的偏好注释。响应的无害性表明其在所有 14 个危害类别中被分类为风险中性，而响应的有用性则根据其解决问题的有效性进行评估。
 
-
+- []
 ## Blogs
 
 
